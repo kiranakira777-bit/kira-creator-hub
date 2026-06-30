@@ -336,10 +336,89 @@ body::after {
   letter-spacing: 0.02em;
 }
 
+/* ---------- Icon styling ---------- */
 .menu-icon {
-  font-size: 30px;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  transition: all 0.3s ease;
 }
+
+.menu-card:hover .menu-icon {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.15) 100%);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #c7d2fe;
+  transform: scale(1.05);
+}
+
+.menu-card-clickable:hover .menu-icon {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(139, 92, 246, 0.2) 100%);
+  border-color: rgba(99, 102, 241, 0.4);
+  color: #e0e7ff;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.15);
+  transform: scale(1.08);
+}
+
+.menu-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.navbar-logo svg {
+  display: block;
+}
+
+/* Unique accent per card for visual variety */
+.menu-card:nth-child(1) .menu-icon {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(99, 102, 241, 0.06) 100%);
+  border-color: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+}
+.menu-card:nth-child(2) .menu-icon {
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.12) 0%, rgba(244, 114, 182, 0.06) 100%);
+  border-color: rgba(244, 114, 182, 0.15);
+  color: #f472b6;
+}
+.menu-card:nth-child(3) .menu-icon {
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.12) 0%, rgba(52, 211, 153, 0.06) 100%);
+  border-color: rgba(52, 211, 153, 0.15);
+  color: #34d399;
+}
+.menu-card:nth-child(4) .menu-icon {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.12) 0%, rgba(251, 191, 36, 0.06) 100%);
+  border-color: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+}
+.menu-card:nth-child(5) .menu-icon {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(56, 189, 248, 0.06) 100%);
+  border-color: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+}
+.menu-card:nth-child(6) .menu-icon {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(139, 92, 246, 0.06) 100%);
+  border-color: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+}
+.menu-card:nth-child(7) .menu-icon {
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.12) 0%, rgba(251, 146, 60, 0.06) 100%);
+  border-color: rgba(251, 146, 60, 0.15);
+  color: #fb923c;
+}
+
+/* Hover: intensify each card's accent */
+.menu-card:nth-child(1):hover .menu-icon { color: #a5b4fc; box-shadow: 0 4px 20px rgba(99, 102, 241, 0.15); }
+.menu-card:nth-child(2):hover .menu-icon { color: #f9a8d4; box-shadow: 0 4px 20px rgba(244, 114, 182, 0.15); }
+.menu-card:nth-child(3):hover .menu-icon { color: #6ee7b7; box-shadow: 0 4px 20px rgba(52, 211, 153, 0.15); }
+.menu-card:nth-child(4):hover .menu-icon { color: #fde68a; box-shadow: 0 4px 20px rgba(251, 191, 36, 0.15); }
+.menu-card:nth-child(5):hover .menu-icon { color: #7dd3fc; box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15); }
+.menu-card:nth-child(6):hover .menu-icon { color: #c4b5fd; box-shadow: 0 4px 20px rgba(139, 92, 246, 0.15); }
+.menu-card:nth-child(7):hover .menu-icon { color: #fdba74; box-shadow: 0 4px 20px rgba(251, 146, 60, 0.15); }
 
 .menu-name {
   font-size: 13px;
