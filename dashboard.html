@@ -16,6 +16,7 @@
   </header>
 
   <main class="page-content">
+   <div id="homeView">
     <!-- Sapaan + progress -->
     <section class="greeting-card">
       <p class="greeting-text">Halo, <span id="namaDashboard">Creator</span> 👋</p>
@@ -34,9 +35,10 @@
     <section class="menu-section">
       <h2 class="section-title">Materi Belajar</h2>
       <div class="menu-grid">
-        <div class="menu-card">
+        <div class="menu-card menu-card-clickable" id="fbMonetizationCard">
           <span class="menu-icon">📘</span>
           <span class="menu-name">Facebook Monetization</span>
+          <span class="menu-card-hint">Buka materi →</span>
         </div>
         <div class="menu-card">
           <span class="menu-icon">🛍</span>
@@ -119,8 +121,34 @@
         </li>
       </ul>
     </section>
+   </div>
+   <!-- /homeView -->
+
+   <!-- Tampilan materi (sidebar + isi materi) -->
+   <div id="courseView" class="course-view hidden">
+     <button id="backToDashboard" class="back-btn">← Kembali ke Dashboard</button>
+
+     <div class="course-layout">
+       <aside class="course-sidebar">
+         <h3 class="sidebar-title">📘 Facebook Monetization</h3>
+         <div class="sidebar-progress">
+           <div class="sidebar-progress-track">
+             <div id="sidebarProgressFill" class="sidebar-progress-fill" style="width: 0%"></div>
+           </div>
+           <span id="sidebarProgressText" class="sidebar-progress-text">0 / 12 modul</span>
+         </div>
+         <ul id="sidebarList" class="sidebar-list"></ul>
+       </aside>
+
+       <section id="courseContent" class="course-content">
+         <!-- Diisi otomatis oleh dashboard.js -->
+       </section>
+     </div>
+   </div>
+   <!-- /courseView -->
   </main>
 
+  <script src="facebook-course.js"></script>
   <script src="dashboard.js"></script>
 </body>
 </html>
