@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buka Akses — Kira Creator Hub</title>
+  <link rel="stylesheet" href="unlock.css" />
+</head>
+<body>
+  <div class="background-decor" aria-hidden="true">
+    <span class="blob blob-blue"></span>
+    <span class="blob blob-green"></span>
+  </div>
+
+  <main class="unlock-card">
+    <h1 class="greeting">Halo <span id="namaGreeting">Creator</span> 👋</h1>
+    <p class="instruction">
+      Sebelum membuka seluruh materi, silakan kunjungi halaman Facebook Kira Kirana.
+    </p>
+
+    <!-- Tombol follow + cincin countdown -->
+    <div class="action-zone">
+      <button id="followBtn" class="btn btn-primary">
+        Follow Facebook Kira Kirana
+      </button>
+
+      <div id="countdownRing" class="countdown-ring hidden">
+        <svg class="ring-svg" viewBox="0 0 120 120">
+          <circle class="ring-track" cx="60" cy="60" r="52"></circle>
+          <circle id="ringProgress" class="ring-progress" cx="60" cy="60" r="52"></circle>
+        </svg>
+        <span id="countdownNumber" class="countdown-number">15</span>
+      </div>
+
+      <p id="waitingText" class="waiting-text hidden">
+        Menunggu sebentar, materi akan segera terbuka...
+      </p>
+
+      <div id="thanksBlock" class="thanks-block hidden">
+        <p class="thanks-text">✅ Terima kasih.</p>
+        <button id="enterBtn" class="btn btn-success">
+          Masuk ke Creator Hub
+        </button>
+      </div>
+    </div>
+
+    <p class="footer-note">Kamu hanya perlu melakukan langkah ini satu kali.</p>
+  </main>
+
+  <script src="unlock.js"></script>
+</body>
+</html>

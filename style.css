@@ -1,0 +1,218 @@
+/* ===========================================================
+   Kira Creator Hub — style.css (Halaman Login)
+   Design tokens: putih, biru Facebook (#1877F2), hijau (#22C55E),
+   abu muda. Mobile-first, rounded, soft shadow.
+=========================================================== */
+
+:root {
+  --color-white: #ffffff;
+  --color-blue: #1877f2;
+  --color-blue-dark: #145dbf;
+  --color-green: #22c55e;
+  --color-green-dark: #16a34a;
+  --color-gray-light: #f3f4f6;
+  --color-gray-border: #e5e7eb;
+  --color-text-dark: #1f2937;
+  --color-text-muted: #6b7280;
+
+  --radius-lg: 24px;
+  --radius-md: 14px;
+  --shadow-soft: 0 12px 32px rgba(17, 24, 39, 0.08);
+  --shadow-soft-hover: 0 16px 40px rgba(17, 24, 39, 0.12);
+
+  --font-base: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-base);
+  background: var(--color-gray-light);
+  color: var(--color-text-dark);
+  padding: 24px 16px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ---------- Dekorasi latar belakang ---------- */
+.background-decor {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.25;
+  animation: floatBlob 10s ease-in-out infinite;
+}
+
+.blob-blue {
+  width: 280px;
+  height: 280px;
+  background: var(--color-blue);
+  top: -60px;
+  left: -60px;
+}
+
+.blob-green {
+  width: 260px;
+  height: 260px;
+  background: var(--color-green);
+  bottom: -80px;
+  right: -60px;
+  animation-delay: -4s;
+}
+
+@keyframes floatBlob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -20px) scale(1.08); }
+}
+
+/* ---------- Card utama ---------- */
+.auth-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 36px 28px;
+  text-align: center;
+  animation: cardEnter 0.5s ease;
+}
+
+@keyframes cardEnter {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.logo-wrapper {
+  margin-bottom: 8px;
+}
+
+.logo-emoji {
+  display: inline-block;
+  font-size: 48px;
+  animation: floatLogo 2.6s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(-6deg); }
+}
+
+.title {
+  margin: 8px 0 6px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  margin: 0 0 28px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Form ---------- */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.text-input,
+.select-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--color-text-dark);
+  background: var(--color-gray-light);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.text-input:focus,
+.select-input:focus {
+  border-color: var(--color-blue);
+  background: var(--color-white);
+}
+
+.select-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+}
+
+/* ---------- Button ---------- */
+.btn {
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 13px 20px;
+  font-size: 15.5px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--color-blue);
+  color: var(--color-white);
+  box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-blue-dark);
+  box-shadow: 0 10px 24px rgba(24, 119, 242, 0.38);
+}
+
+.btn:disabled {
+  background: var(--color-gray-border);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 480px) {
+  .auth-card {
+    padding: 44px 36px;
+  }
+}

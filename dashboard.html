@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Kira Creator Hub</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <span class="navbar-logo">🚀</span>
+      <h1 class="navbar-title">Kira Creator Hub</h1>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <!-- Sapaan + progress -->
+    <section class="greeting-card">
+      <p class="greeting-text">Halo, <span id="namaDashboard">Creator</span> 👋</p>
+      <div class="progress-section">
+        <div class="progress-label-row">
+          <span class="progress-label">Progress belajar</span>
+          <span id="progressPercent" class="progress-percent">0%</span>
+        </div>
+        <div class="progress-track">
+          <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu kategori -->
+    <section class="menu-section">
+      <h2 class="section-title">Materi Belajar</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <span class="menu-icon">📘</span>
+          <span class="menu-name">Facebook Monetization</span>
+        </div>
+        <div class="menu-card">
+          <span class="menu-icon">🛍</span>
+          <span class="menu-name">Affiliate Academy</span>
+        </div>
+        <div class="menu-card">
+          <span class="menu-icon">🤖</span>
+          <span class="menu-name">AI Creator Tools</span>
+        </div>
+        <div class="menu-card">
+          <span class="menu-icon">🎬</span>
+          <span class="menu-name">Content Formula</span>
+        </div>
+        <div class="menu-card">
+          <span class="menu-icon">⚡</span>
+          <span class="menu-name">Automation</span>
+        </div>
+        <div class="menu-card">
+          <span class="menu-icon">🎁</span>
+          <span class="menu-name">Free Resources</span>
+        </div>
+        <div class="menu-card">
+          <span class="menu-icon">📢</span>
+          <span class="menu-name">Creator Update</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="roadmap-section">
+      <h2 class="section-title">Facebook Monetization Roadmap</h2>
+      <ul class="checklist">
+        <li class="checklist-item">
+          <input type="checkbox" disabled />
+          <span>Persiapan Akun</span>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" disabled />
+          <span>Professional Mode</span>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" disabled />
+          <span>Menentukan Niche</span>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" disabled />
+          <span>Konten Original</span>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" disabled />
+          <span>Strategi Upload</span>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" disabled />
+          <span>Insight Facebook</span>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" disabled />
+          <span>Memenuhi Syarat Monetisasi</span>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" disabled />
+          <span>Kesalahan Umum</span>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" disabled />
+          <span>FAQ</span>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" disabled />
+          <span>Bonus Prompt AI</span>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" disabled />
+          <span>Bonus Hook</span>
+        </li>
+        <li class="checklist-item">
+          <input type="checkbox" disabled />
+          <span>Bonus Checklist</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

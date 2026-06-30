@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kira Creator Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Dekorasi latar belakang (blob blur), murni visual -->
+  <div class="background-decor" aria-hidden="true">
+    <span class="blob blob-blue"></span>
+    <span class="blob blob-green"></span>
+  </div>
+
+  <main class="auth-card">
+    <div class="logo-wrapper">
+      <span class="logo-emoji" role="img" aria-label="Roket">🚀</span>
+    </div>
+
+    <h1 class="title">Kira Creator Hub</h1>
+    <p class="subtitle">
+      Belajar Facebook Monetization, Affiliate, AI, dan Creator Tools secara gratis.
+    </p>
+
+    <form id="loginForm" class="login-form" novalidate>
+      <div class="field-group">
+        <label for="namaInput" class="field-label">Nama</label>
+        <input
+          type="text"
+          id="namaInput"
+          class="text-input"
+          placeholder="Tulis nama kamu..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="field-group">
+        <label for="modeSelect" class="field-label">
+          Sudah menggunakan Facebook Professional Mode?
+        </label>
+        <select id="modeSelect" class="select-input">
+          <option value="ya">Ya</option>
+          <option value="belum">Belum</option>
+          <option value="tidak-tahu">Tidak tahu</option>
+        </select>
+      </div>
+
+      <button type="submit" id="submitBtn" class="btn btn-primary" disabled>
+        Masuk
+      </button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
